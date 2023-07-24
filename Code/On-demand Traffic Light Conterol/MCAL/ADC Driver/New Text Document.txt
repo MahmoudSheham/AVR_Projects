@@ -1,0 +1,301 @@
+	/*switch (channelAndGainSlection)
+	{
+		case ADC0:
+			CLR_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;
+		case ADC1:
+			SET_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;
+		case ADC2:
+			CLR_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;
+		case ADC3:
+			SET_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;			
+		case ADC4:
+			CLR_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;			
+		case ADC5:
+			SET_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;
+		case ADC6:
+			CLR_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;
+		case ADC7:
+			SET_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;
+		case ADC0_ADC0_x10:
+			CLR_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;
+		case ADC1_ADC0_x10:
+			SET_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;					
+		case ADC0_ADC0_x200:
+			CLR_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;
+		case ADC1_ADC0_x200:
+			SET_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;
+		case ADC2_ADC2_x10:
+			CLR_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;					
+		case ADC3_ADC2_x10:
+			SET_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;		
+		case ADC2_ADC2_x200:
+			CLR_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;			
+		case ADC3_ADC2_x200:
+			SET_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			CLR_BIT(ADMUX,4);
+			break;
+		case ADC0_ADC1_x1:
+			CLR_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;
+		case ADC1_ADC1_x1:
+			SET_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;
+		case ADC2_ADC1_x1:
+			CLR_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;	
+		case ADC3_ADC1_x1:
+			SET_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;		
+		case ADC4_ADC1_x1:
+			CLR_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;
+		case ADC5_ADC1_x1:
+			SET_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;
+		case ADC6_ADC1_x1:
+			CLR_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;
+		case ADC7_ADC1_x1:
+			SET_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			CLR_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;									
+		case ADC0_ADC2_x1:
+			CLR_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;
+		case ADC1_ADC2_x1:
+			SET_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;
+		case ADC2_ADC2_x1:
+			CLR_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;
+		case ADC3_ADC2_x1:
+			SET_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			CLR_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;									
+		case ADC4_ADC2_x1:
+			CLR_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;
+		case ADC5_ADC2_x1:
+			SET_BIT(ADMUX,0);
+			CLR_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;
+		case V_BG:
+			CLR_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;												
+		case GND:
+			SET_BIT(ADMUX,0);
+			SET_BIT(ADMUX,1);
+			SET_BIT(ADMUX,2);
+			SET_BIT(ADMUX,3);
+			SET_BIT(ADMUX,4);
+			break;
+	}*/
+
+
+
+
+
+
+
+
+
+
+
+
+switch (prescaler)
+	{
+		case PRESCALER_1:
+			CLR_BIT(ADCSRA, 2);
+			CLR_BIT(ADCSRA, 1);
+			CLR_BIT(ADCSRA, 0);
+			break;
+		case PRESCALER_2:
+			CLR_BIT(ADCSRA, 2);
+			CLR_BIT(ADCSRA, 1);
+			SET_BIT(ADCSRA, 0);
+			break;
+		case PRESCALER_4:
+			CLR_BIT(ADCSRA, 2);
+			SET_BIT(ADCSRA, 1);
+			CLR_BIT(ADCSRA, 0);
+			break;	
+		case PRESCALER_8:
+			CLR_BIT(ADCSRA, 2);
+			SET_BIT(ADCSRA, 1);
+			SET_BIT(ADCSRA, 0);
+			break;
+		case PRESCALER_16:
+			SET_BIT(ADCSRA, 2);
+			CLR_BIT(ADCSRA, 1);
+			CLR_BIT(ADCSRA, 0);
+			break;
+		case PRESCALER_32:
+			SET_BIT(ADCSRA, 2);
+			CLR_BIT(ADCSRA, 1);
+			SET_BIT(ADCSRA, 0);
+			break;	
+		case PRESCALER_64:
+			SET_BIT(ADCSRA, 2);
+			SET_BIT(ADCSRA, 1);
+			CLR_BIT(ADCSRA, 0);
+			break;
+		case PRESCALER_128:
+			SET_BIT(ADCSRA, 2);
+			SET_BIT(ADCSRA, 1);
+			SET_BIT(ADCSRA, 0);
+			break;														
+	}
+
+
+
+
+
+
+
+
+
+/*void ADC_Enable(EN_ADC_Enable Enable)
+{
+	if (Enable == ADC_ON)
+	{
+		SET_BIT(ADCSRA, 7);
+		return;	
+	}
+	CLR_BIT(ADCSRA, 7);
+	return;
+}*/
